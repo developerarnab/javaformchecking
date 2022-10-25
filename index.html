@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<style>
+body{background: ;}
+
+    h1 span{color:rgb(255, 29, 29);font-size: 70px;}
+    #subtext{color:blueviolet;font-size: 20px;}
+</style>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-success text-center py-5" style="font-weight:bold;font-size:40px;"><span>Java Script</span> Form Validation<br><span id="subtext">( Only For Checking One by One )</span></h1>
+    <div class="col-lg-9 m-auto d-block">
+<form action="#" onsubmit="return validation()" class="bg-light">
+
+    <div class="form-group">
+        <label>Username:</label>
+    <input type="text" class="form-control" name="user" id="user" autocomplete="off">
+    <span id="Username" class="text-danger font-weight-bold"></span>    
+    </div>
+<br>
+    <div class="form-group">
+        <label>Password:</label>
+    <input type="text" class="form-control" name="Password" id="pass" autocomplete="off">
+    <span id="Password" class="text-danger font-weight-bold"></span>    
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Confirm Password:</label>
+    <input type="text" class="form-control" name="Pass" id="conpass" autocomplete="off">
+    <span id="ConfirmPasswords" class="text-danger font-weight-bold"></span>    
+    </div>
+
+     <br>
+
+    <div class="form-group">
+        <label>Mobile Number:</label>
+    <input type="text" class="form-control" name="mobile" id="mobilenumber" autocomplete="off">
+    <span id="MobileNumber" class="text-danger font-weight-bold"></span>    
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Email:</label>
+    <input type="text" class="form-control" name="email" id="emails" autocomplete="off">
+    <span id="e-mail" class="text-danger font-weight-bold"></span>    
+    </div>                                                            
+    <input type="submit" name="submit" value="submit" class="btn btn-success my-3">
+
+   </form>
+    </div>    
+    </div>
+<script type="text/javascript">
+
+function validation(){
+
+    var user = document.getElementById('user').value;
+    var pass = document.getElementById('pass').value;
+    var conpass = document.getElementById('conpass').value;
+    var mobilenumber = document.getElementById('mobilenumber').value;
+    var emails = document.getElementById('emails').value;
+
+if(user == ""){
+
+document.getElementById('Username').innerHTML =" ** Please fill the username field ";
+return false;
+
+}
+
+if(pass == ""){
+
+document.getElementById('Password').innerHTML =" ** Please fill the password ";
+return false;
+
+}
+
+if(conpass == ""){
+
+document.getElementById('ConfirmPasswords').innerHTML =" ** Please fill confirm password ";
+return false;
+
+}
+
+if(mobilenumber == ""){
+
+document.getElementById('MobileNumber').innerHTML =" ** Please enter the mobile number ";
+return false;
+
+}
+
+if(emails == ""){
+
+document.getElementById('e-mail').innerHTML =" ** Please fill email id ";
+return false;
+
+}
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
